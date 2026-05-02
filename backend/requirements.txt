@@ -1,0 +1,13 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+yfinance>=0.2.44
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+pydantic>=2.9
+python-dotenv>=1.0
+
+# TensorFlow (only required for the LSTM model). It currently has no wheels for
+# Python 3.14, so it lives in a separate file: install with
+#   pip install -r requirements-lstm.txt
+# on Python 3.10–3.12 to enable the LSTM endpoint.

@@ -1,0 +1,16 @@
+# Render.com blueprint for the FastAPI backend.
+# Push this repo to GitHub, create a new Web Service on Render pointing at /backend,
+# and Render will pick this file up automatically.
+services:
+  - type: web
+    name: stock-prediction-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ALLOWED_ORIGINS
+        value: "*"
